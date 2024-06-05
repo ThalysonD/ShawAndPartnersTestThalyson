@@ -1,6 +1,6 @@
 import "express-async-errors";
 import express from "express";
-import cors from "cors";
+import cors, { CorsOptions } from "cors";
 import helmet from "helmet";
 import morgan from "morgan";
 import fileRoutes from "./routes/file.routes";
@@ -21,8 +21,19 @@ const limiter = rateLimit({
   legacyHeaders: false,
 });
 
-const corsOptions = {
-  origin: "*",
+const allowedOrigins = [
+  process.env.ALLOWED_ORIGIN,
+  process.env.ALLOWED_LOCAL_ORIGIN,
+];
+
+const corsOptions: CorsOptions = {
+  origin: (origin, callback) => {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   credentials: true,
 };
