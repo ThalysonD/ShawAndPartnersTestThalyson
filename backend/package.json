@@ -41,7 +41,7 @@
     "typescript": "^5.2.2"
   },
   "resolutions": {
-    "glob": "7.2.4",
+    "glob": "7.2.3",
     "inflight": "1.0.6"
   }
 }
