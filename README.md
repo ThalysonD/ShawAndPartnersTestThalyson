@@ -2,38 +2,32 @@
 
 ## Overview
 
-The Shaw And Partners Project is a sophisticated full-stack application that allows users to upload a .csv file containing predefined data. This data is then processed by an API, which returns the values to be displayed on the frontend. This seamless interaction between the frontend and backend ensures efficient and user-friendly data management.
+The Shaw And Partners Project is a full-stack application that enables users to upload a .csv file and display the data as cards on the frontend. The application efficiently handles data management through seamless frontend and backend interaction.
 
 ## Libraries and Frameworks
 
 ### Backend
 
-The backend architecture is built on a solid foundation of modern technologies:
-
-- **Express**: A fast, unopinionated, minimalist web framework for Node.js.
-- **Jest**: A delightful JavaScript testing framework with a focus on simplicity.
-- **Typescript**: A superset of JavaScript that compiles to clean JavaScript output.
-- **Csv-parser**: An intuitive, streaming CSV parser for Node.js.
-- **Multer**: A middleware for handling `multipart/form-data`, primarily used for uploading files.
-- **Cors**: A Node.js package for providing an Express middleware that can be used to enable CORS (Cross-Origin Resource Sharing).
+- **Express**
+- **Jest**
+- **Typescript**
+- **Csv-parser**
+- **Multer**
+- **Cors**
 
 ### Frontend
 
-Our frontend leverages cutting-edge technologies for a responsive and dynamic user experience:
-
-- **Next.js with React**: A powerful React framework that allows for server-side rendering and generating static websites.
-- **Typescript**: Typescript adds static typing to JavaScript, enhancing the development process and reducing errors.
-- **Tailwind CSS**: A highly customizable, low-level CSS framework that gives you all of the building blocks you need to build bespoke designs without any annoying opinionated styles you have to fight to override.
-- **SWR**: A React hooks library for remote data fetching that allows you to fetch, cache, and update data in your React and Next.js applications effortlessly.
+- **Next.js with React**
+- **Typescript**
+- **Tailwind CSS**
+- **SWR**
 
 ## Getting Started
 
 ### Running the Frontend
 
-To start the frontend application, follow these steps:
-
-1. Clone the repository to your local environment.
-2. Change directory to the frontend folder:
+1. Clone the repository.
+2. Navigate to the frontend folder:
 
     ```sh
     cd frontend
@@ -53,8 +47,6 @@ To start the frontend application, follow these steps:
 
 ### Running the Backend
 
-For local backend setup:
-
 1. Navigate to the backend directory:
 
     ```sh
@@ -67,7 +59,7 @@ For local backend setup:
     npm install
     ```
 
-3. Start the backend server (default port is 3000):
+3. Start the backend server:
 
     ```sh
     npm run dev
@@ -75,9 +67,7 @@ For local backend setup:
 
 ### Backend Testing
 
-To execute the backend tests:
-
-1. Change to the backend directory:
+1. Navigate to the backend directory:
 
     ```sh
     cd backend
@@ -97,9 +87,11 @@ To execute the backend tests:
 
 ## Deployment
 
-The application is fully deployed and can be accessed at the following URLs:
-
-### Because the hosted servers are free, performance may not be the best, I recommend running local with local pointing
+The application is fully deployed and accessible at the following URLs:
 
 - **Frontend**: [https://main--shaw-partnerts-test-thalyson.netlify.app/](https://main--shaw-partnerts-test-thalyson.netlify.app/)
 - **Backend**: [https://shaw-and-parters-thalyson-cae22a68e1ab.herokuapp.com/](https://shaw-and-parters-thalyson-cae22a68e1ab.herokuapp.com/)
+
+## Observation
+
+When running locally using localhost:3000/api and localhost:4000/api, you might need to refresh the page during the initial loading screen to see updates. This behavior does not occur online, where everything functions correctly.
