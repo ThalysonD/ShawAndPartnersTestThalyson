@@ -22,7 +22,7 @@ const limiter = rateLimit({
 });
 
 const corsOptions = {
-  origin: 'https://shaw-partners-frontend.vercel.app',
+  origin: 'https://front-test-plum-six.vercel.app/',
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   credentials: true,
 };
