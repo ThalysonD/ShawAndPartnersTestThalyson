@@ -21,19 +21,20 @@ const limiter = rateLimit({
   legacyHeaders: false,
 });
 
+const corsOptions = {
+  origin: 'https://shaw-partners-frontend.vercel.app',
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  credentials: true,
+};
+
+app.use(cors(corsOptions));
 app.use(helmet());
-app.use(cors());
 app.use(express.json());
-
 app.use(morgan("combined"));
-
 app.use(limiter);
-
 app.use(requestLoggerMiddleware);
-
 app.use("/api/files", fileRoutes);
 app.use("/api/users", userRoutes);
-
 app.use(errorHandlerMiddleware);
 
 export default app;

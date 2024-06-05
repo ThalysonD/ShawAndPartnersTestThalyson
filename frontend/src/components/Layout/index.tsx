@@ -11,7 +11,7 @@ import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import Image from "next/image";
 import { classNames } from "@/utils/useClassNames";
 import { navigation, userNavigation } from "./constants";
-import ShawImage from "@/assets/pngs/shaw.png";
+import ShawImage from "../../assets/pngs/Shaw.png";
 import ProfilePic from "@/assets/pngs/Profile.png";
 import SearchComponent from "../Search";
 import Notifications from "../Notifications";
