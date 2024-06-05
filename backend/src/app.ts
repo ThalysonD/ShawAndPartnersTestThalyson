@@ -22,7 +22,7 @@ const limiter = rateLimit({
 });
 
 const corsOptions = {
-  origin: 'https://front-test-plum-six.vercel.app/',
+  origin: "*",
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   credentials: true,
 };
